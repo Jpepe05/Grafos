@@ -1,25 +1,22 @@
+//Grafo não direcionado ponderado
+
 #include "MatrizAdjacente.hpp"
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    int vertices, max_vertices, origem, destino, peso;
-
-    cout<<"Digite o numero de vertices: ";
-    cin>>vertices;
+    MatrizAdjacente ma(7);   
     
-    MatrizAdjacente ma(vertices);
-    max_vertices = vertices * (vertices - 1);
+    ma.addAresta(1, 2, 3);
+    ma.addAresta(1, 3, 2);
+    ma.addAresta(3, 4, 1);
+    ma.addAresta(4, 5, 1);
+    ma.addAresta(5, 6, 5);
+    ma.addAresta(6, 4, 1);
+    ma.addAresta(6, 7, 4);
+    ma.addAresta(7, 1, 2);
     
-    for (int i = 0; i < max_vertices; i++)
-    {
-        cout<<"Digite a aresta e o peso(-1 -1 -1 to exit): ";
-        cin>>origem>>destino>> peso;
-        if((origem == -1) && (destino == -1) && (peso == -1))
-            break;
-        ma.addAresta(origem, destino, peso);
-    }
     ma.mostrar();
     
     return 0;

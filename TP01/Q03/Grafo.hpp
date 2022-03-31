@@ -11,12 +11,12 @@ class Grafo
     public: 
         Lista *listaAdjacencia[NUM_MAX_VERTEX];
         Grafo();
-        void insertVertex(int label);
-        void insertEdge(int labelVertexOut, int labelVertexIn, int peso);
+        void addVertice(int label);
+        void addAresta(int labelVertexOut, int labelVertexIn, int peso);
         void print();
 
     private:
-        void insert(Cell *vertice);
+        void add(Cell *vertice);
         
 };
 

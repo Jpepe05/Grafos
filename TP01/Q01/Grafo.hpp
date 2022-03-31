@@ -11,8 +11,8 @@ class Grafo
     public: 
         Lista *listaAdjacencia[NUM_MAX_VERTEX];
         Grafo();
-        void insertVertex(int label);
-        void insertEdge(int labelVertexOut, int labelVertexIn);
+        void addVertice(int label);
+        void addAresta(int labelVertexOut, int labelVertexIn);
         void print();
 
     private:

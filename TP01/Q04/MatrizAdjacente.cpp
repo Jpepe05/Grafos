@@ -26,6 +26,7 @@ void MatrizAdjacente::addAresta(int origem, int destino, int peso){
     else
     {
         matriz[origem - 1][destino - 1] = peso;
+        matriz[destino - 1][origem - 1] = peso;
     }
 }
         
