@@ -6,11 +6,11 @@ Grafo::Grafo() {
     
 }
 
-void Grafo::insertVertex(int label) {
-    Grafo::insert(new Cell(label, 0));
+void Grafo::addVertice(int label) {
+    Grafo::add(new Cell(label, 0));
 }
 
-void Grafo::insert(Cell *vertice) {
+void Grafo::add(Cell *vertice) {
 
     int index = (vertice->vertice)-1;
     
@@ -22,7 +22,7 @@ void Grafo::insert(Cell *vertice) {
     }
 }
 
-void Grafo::insertEdge(int labelVertexOut, int labelVertexIn, int peso) {
+void Grafo::addAresta(int labelVertexOut, int labelVertexIn, int peso) {
     int index = labelVertexOut-1;
 
     if(listaAdjacencia[index] != NULL && listaAdjacencia[labelVertexIn-1] != NULL) {

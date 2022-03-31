@@ -1,3 +1,5 @@
+//Grafo direcionado ponderado
+
 #include "Grafo.hpp"
 #include "Cell.hpp"
 #include <iostream>
@@ -9,14 +11,15 @@ int main() {
     
     Cell *vertex = new Cell(1, 1);
 
-    grafo->insertVertex(1);
-    grafo->insertVertex(2);
-    grafo->insertVertex(3);
-    grafo->insertVertex(4);
-    grafo->insertEdge(1, 2, 2);
-    grafo->insertEdge(1, 3, 1);
-    grafo->insertEdge(1, 4, 7);
-    grafo->insertEdge(2, 2, 4);
+    grafo->addVertice(1);
+    grafo->addVertice(2);
+    grafo->addVertice(3);
+    grafo->addVertice(4);
+    grafo->addAresta(1, 2, 2);
+    grafo->addAresta(1, 3, 1);
+    grafo->addAresta(1, 4, 7);
+    grafo->addAresta(2, 2, 4);
+    
     grafo->print();
     
     return 0;
